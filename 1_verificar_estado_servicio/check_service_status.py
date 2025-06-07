@@ -1,4 +1,4 @@
-import os
+import os # os = operating system
 
 def is_service_active(hostname):
 # def is_service_active(hostname, protocol="icmp"):
@@ -6,7 +6,14 @@ def is_service_active(hostname):
     # if protocol == "http":
     #     print("Chequeando via HTTP - no implementado")
     #     return False
-    
+
+
+    """
+    Verifica si un host responde al ping.
+    Retorna True si responde, False si no.
+    """
+    # Windows: f"ping -n 1 {hostname} > NUL 2>&1
+    # Linux/macOS f"ping -c 1 {hostname} > /dev/null 2>&1
     command = f"ping -n 1 {hostname} > NUL 2>&1"
 
     response_code = os.system(command)
