@@ -21,6 +21,7 @@ def is_service_active(hostname):
     # Si el código de respuesta es 0, el ping es exitoso.
     return response_code == 0
 
-# if __name__ == "__main__":
-#     print(f"¿Está 'localhost' activo?: {is_service_active('localhost')}")
-#     print(f"¿Esté servicio activo?: {is_service_active('hostinventado123xyz.com')}")
+# Prueba manual para ver si funciona (es útil para entender el funcionamiento antes de aplicar el test)
+if __name__ == "__main__":
+    print(f"¿Está 'localhost' activo?: {is_service_active('localhost')}")
+    print(f"¿Esté servicio activo?: {is_service_active('hostinventado123xyz.com')}")
